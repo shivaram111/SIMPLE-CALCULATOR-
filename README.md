@@ -3,18 +3,17 @@ using namespace std;
 
 int main() {
     double num1, num2;
-    char operation;
+    char op;
 
-    cout << "Welcome to the Simple Calculator!" << endl;
+    cout << "=== Simple Calculator ===\n";
     cout << "Enter first number: ";
     cin >> num1;
+    cout << "Enter operator (+, -, *, /): ";
+    cin >> op;
     cout << "Enter second number: ";
     cin >> num2;
 
-    cout << "Choose operation (+, -, *, /): ";
-    cin >> operation;
-
-    switch (operation) {
+    switch(op) {
         case '+':
             cout << "Result: " << num1 + num2 << endl;
             break;
@@ -25,13 +24,13 @@ int main() {
             cout << "Result: " << num1 * num2 << endl;
             break;
         case '/':
-            if (num2 != 0)
+            if(num2 != 0)
                 cout << "Result: " << num1 / num2 << endl;
             else
-                cout << "Error: Division by zero is not allowed." << endl;
+                cout << "Error! Division by zero.\n";
             break;
         default:
-            cout << "Invalid operation!" << endl;
+            cout << "Invalid operator!\n";
     }
 
     return 0;
